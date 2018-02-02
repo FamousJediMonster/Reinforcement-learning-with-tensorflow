@@ -45,8 +45,9 @@ class Maze(tk.Tk, object):
             x0, y0, x1, y1 = c, 0, c, MAZE_H * UNIT
             self.canvas.create_line(x0, y0, x1, y1)
         for r in range(0, MAZE_H * UNIT, UNIT):
-            x0, y0, x1, y1 = 0, r, MAZE_H * UNIT, r
+            x0, y0, x1, y1 = 0, r, MAZE_W * UNIT, r
             self.canvas.create_line(x0, y0, x1, y1)
+        #this way your maze can be a ractangel as well as a square 
 
         # create origin
         origin = np.array([20, 20])
